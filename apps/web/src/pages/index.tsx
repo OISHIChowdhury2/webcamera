@@ -11,10 +11,10 @@ function index() {
       navigator.mediaDevices
 
             .getUserMedia({
-              video: {width: 2000, height: 500}
+              video: {width: 650, height: 500}
             })
             .then(stream =>{
-              let video = videpRef.current;
+              let video:any = videpRef.current;
               video.srcObject = stream;
               video.play();
             })
@@ -24,11 +24,11 @@ function index() {
     }
 
     const takePhoto =() =>{
-      const width = 314;
-      const height =width /(16/9);
+      const width = 200;
+      const height =width /(12/9);
 
       let video = videpRef.current;
-      let photo =photoRef.current;
+      let photo:any =photoRef.current;
 
       photo.width = width;
       photo.height = height;
@@ -45,15 +45,15 @@ function index() {
 
   return (
     <>
-    <div id='App'>
-      <div id='camera'>
+    <div id='App' >
+      <div id='camera' >
         <video ref={videpRef}></video>
         <button id='button' onClick={takePhoto}>Snap</button>
       </div>
+      
       <div id={ 'result' + (hasPhoto ? 'hasPhoto' :
       '')}>
-
-        <canvas id='canvas' ref={photoRef}></canvas>
+          <canvas id='canvas' ref={photoRef}></canvas> 
       </div>
     </div>
     

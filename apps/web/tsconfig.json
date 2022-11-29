@@ -11,6 +11,6 @@
     }
   },
   "extends": "tsconfig/nextjs.json",
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"],
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "src/pages/reg/register.tsx"],
   "exclude": ["node_modules"]
 }

@@ -25,11 +25,21 @@ const Navbar = () => {
        md:space-x-8 md:mt-0 md:text-sm md:font-medium md:border-0 
        md:bg-transparent dark:bg-gray-800 md:dark:bg-transparent 
        dark:border-gray-700">
+        
+        <li>
+          <a href="../" className="block py-2 pl-3 pr-4 text-gray-700 
+          rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 
+          md:hover:text-blue-700 md:p-0 dark:text-gray-400 
+          md:dark:hover:text-black dark:hover:bg-gray-700
+           dark:hover:text-black md:dark:hover:bg-transparent">Varification</a>
+        </li>
         <li>
           <a href="'../../reg/register" className="block py-2 pl-3 pr-4 text-black 
           bg-blue-700 rounded md:bg-transparent md:text-vlack-900 md:p-0
            md:dark:text-black dark:bg-blue-600 md:dark:bg-transparent" aria-current="page">Register</a>
         </li>
+
+
         <li>
           <a href="#" className="block py-2 pl-3 pr-4 text-gray-700 
           rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 
@@ -37,13 +47,11 @@ const Navbar = () => {
           md:dark:hover:text-black dark:hover:bg-gray-700 
           dark:hover:text-black md:dark:hover:bg-transparent">Employee List</a>
         </li>
-        <li>
-          <a href="#" className="block py-2 pl-3 pr-4 text-gray-700 
-          rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 
-          md:hover:text-blue-700 md:p-0 dark:text-gray-400 
-          md:dark:hover:text-black dark:hover:bg-gray-700
-           dark:hover:text-black md:dark:hover:bg-transparent">Varification</a>
-        </li>
+
+
+      
+
+
       </ul>
     </div>
   </div>
