@@ -1,0 +1,45 @@
+version: "3.7"
+
+services:
+  api:
+    container_name: api
+    env_file:
+      - ./apps/api/.env
+    build:
+      context: .
+      dockerfile: ./apps/api/Dockerfile
+    restart: always
+    ports:
+      - 3030:3030
+    networks:
+      - app_network
+  web:
+    container_name: web
+    env_file:
+      - ./apps/web/.env
+    build:
+      context: .
+      dockerfile: ./apps/web/Dockerfile
+    restart: always
+    ports:
+      - 3000:3000
+    networks:
+      - app_network
+  docs:
+    container_name: docs
+    env_file:
+      - ./apps/docs/.env
+    build:
+      context: .
+      dockerfile: ./apps/docs/Dockerfile
+    restart: always
+    ports:
+      - 3001:3000
+    networks:
+      - app_network
+
+# Define a network, which allows containers to communicate
+# with each other, by using their container name as a hostname
+networks:
+  app_network:
+    external: true
